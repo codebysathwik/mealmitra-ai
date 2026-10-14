@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #174C3C;
+  --color-forest-dark: #0f3328;
+  --color-forest-light: #236551;
+  --color-fresh: #2F8057;
+  --color-fresh-light: #3da872;
+  --color-fresh-dark: #246343;
+  --color-cream: #F5F2E9;
+  --color-cream-light: #faf8f2;
+  --color-cream-dark: #e8e3d3;
+  --color-gold: #E8B65A;
+  --color-gold-light: #f3d08c;
+  --color-gold-dark: #c99335;
+
+  --color-primary-50: #f2f8f5;
+  --color-primary-100: #e2f1ea;
+  --color-primary-200: #c4e3d3;
+  --color-primary-300: #97cdb4;
+  --color-primary-400: #62b18f;
+  --color-primary-500: #2F8057;
+  --color-primary-600: #174C3C;
+  --color-primary-700: #133f32;
+  --color-primary-800: #103329;
+  --color-primary-900: #0d2a22;
+
+  --color-cream-50: #faf8f2;
+  --color-cream-100: #F5F2E9;
+  --color-cream-200: #ede8d8;
+  --color-cream-300: #ded5bd;
+
+  --color-accent-400: #f3d08c;
+  --color-accent-500: #E8B65A;
+  --color-accent-600: #c99335;
+
+  --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-100);
+  color: #172b23;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4e3d3;
+  border-radius: 3px;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #2F8057;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(47, 128, 87, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(47, 128, 87, 0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up  { animation: fadeInUp .4s ease forwards; }
+.animate-fade-in     { animation: fadeIn .3s ease forwards; }
+.animate-float       { animation: float 3s ease-in-out infinite; }
+.animate-pulse-green { animation: pulse-green 2s infinite; }
+
+/* Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #e7ece9 25%, #f4f7f5 50%, #e7ece9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 227, 211, 0.7);
+}
+
+/* Status badges */
+.badge-listed     { background:#e2f1ea; color:#174C3C; border: 1px solid #c4e3d3; }
+.badge-requested  { background:#fdf5e6; color:#966415; border: 1px solid #f3d08c; }
+.badge-accepted   { background:#e0f2fe; color:#0369a1; border: 1px solid #bae6fd; }
+.badge-assigned   { background:#ede9fe; color:#5b21b6; border: 1px solid #ddd6fe; }
+.badge-collected  { background:#ffedd5; color:#9a3412; border: 1px solid #fed7aa; }
+.badge-completed  { background:#dcfce7; color:#15803d; border: 1px solid #bbf7d0; }
+.badge-cancelled  { background:#fee2e2; color:#991b1b; border: 1px solid #fecaca; }
+.badge-expired    { background:#f1f5f9; color:#475569; border: 1px solid #e2e8f0; }
+.badge-rejected   { background:#fce7f3; color:#9d174d; border: 1px solid #fbcfe8; }
+.badge-draft      { background:#f8fafc; color:#64748b; border: 1px solid #e2e8f0; }
+
+/* Hero gradient with Forest Green */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f3328 0%, #174C3C 45%, #236551 75%, #2F8057 100%);
+}
+
+/* Card hover */
+.card-hover {
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 16px 32px rgba(23, 76, 60, 0.08);
+  transform: translateY(-2px);
+  border-color: #c4e3d3;
+}
+
+/* Custom Forest & Fresh & Gold helpers */
+.bg-forest { background-color: #174C3C; }
+.text-forest { color: #174C3C; }
+.border-forest { border-color: #174C3C; }
+
+.bg-fresh { background-color: #2F8057; }
+.text-fresh { color: #2F8057; }
+.border-fresh { border-color: #2F8057; }
+
+.bg-cream { background-color: #F5F2E9; }
+.border-cream { border-color: #e8e3d3; }
+
+.bg-gold { background-color: #E8B65A; }
+.text-gold { color: #c99335; }
+.border-gold { border-color: #E8B65A; }
