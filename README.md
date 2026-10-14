@@ -90,6 +90,12 @@ MealMitra AI features a responsive design adhering to the brand palette:
    npm run build
    ```
 
+5. Run automated test suite:
+   ```bash
+   npm test
+   ```
+   *Runs 22 unit tests covering RBAC, Smart Rescue AI matching, and food inventory workflows.*
+
 ---
 
 ## 🔑 Demo Test Credentials
