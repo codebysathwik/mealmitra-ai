@@ -80,12 +80,6 @@ export default function Login() {
           <p className="mt-1 text-sm text-gray-600">
             Sign in to access your surplus food rescue dashboard
           </p>
-
-          {/* Mode Badge */}
-          <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-forest border border-emerald-200">
-            <ShieldCheck size={14} className="text-fresh" />
-            <span>{authMode === 'supabase' ? 'Supabase Auth Active' : 'Demo Auth Mode (Local Storage)'}</span>
-          </div>
         </div>
 
         {/* Login Form Box */}

@@ -244,24 +244,9 @@ export function ConfirmDialog({ open, title, message, onConfirm, onCancel, confi
   );
 }
 
-// ── Demo Banner ────────────────────────────────────────────────
-export function DemoBanner({ authMode = 'demo' }) {
-  return (
-    <div className={`border-b px-4 py-2 text-center text-xs flex items-center justify-center gap-2 ${
-      authMode === 'supabase'
-        ? 'bg-emerald-50 border-emerald-200 text-forest font-semibold'
-        : 'bg-amber-50/90 border-amber-200 text-amber-900'
-    }`}>
-      <span className="font-bold">
-        {authMode === 'supabase' ? '⚡ Cloud Mode:' : '🛡️ Demo Auth Mode (Local Storage):'}
-      </span>
-      <span>
-        {authMode === 'supabase'
-          ? 'Connected to live Supabase Auth and PostgreSQL database.'
-          : 'Role isolation and session persistence active locally. Add Supabase keys to .env.local to switch to cloud PostgreSQL.'}
-      </span>
-    </div>
-  );
+// ── Demo Banner (Hidden) ───────────────────────────────────────
+export function DemoBanner() {
+  return null;
 }
 
 // ── Page Header ────────────────────────────────────────────────

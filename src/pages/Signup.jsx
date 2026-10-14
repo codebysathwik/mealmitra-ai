@@ -102,10 +102,6 @@ export default function Signup() {
         
         {/* Title */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-forest border border-emerald-200 mb-2">
-            <ShieldCheck size={14} className="text-fresh" />
-            <span>{authMode === 'supabase' ? 'Supabase Auth' : 'Verified Local Demo Auth'}</span>
-          </div>
           <h1 className="text-3xl font-extrabold text-forest tracking-tight" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
             Join the Food Rescue Mission
           </h1>

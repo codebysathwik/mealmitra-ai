@@ -150,12 +150,9 @@ export default function Header() {
                           <Building size={12} /> {profile.organizationName}
                         </div>
                       )}
-                      <div className="mt-2.5 flex items-center justify-between">
+                      <div className="mt-2.5 flex items-center justify-start">
                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border ${ROLE_BADGES[profile?.role]}`}>
                           {profile?.role}
-                        </span>
-                        <span className="text-[10px] text-gray-400">
-                          {authMode === 'supabase' ? 'Supabase' : 'Local Demo'}
                         </span>
                       </div>
                     </div>

@@ -4,7 +4,6 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { AppProvider } from './context/AppContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { DemoBanner } from './components/ui';
 
 // Pages
 import Landing            from './pages/Landing';
@@ -90,10 +89,8 @@ function PublicOnlyRoute({ children }) {
 }
 
 function AppLayout() {
-  const { authMode } = useAuth();
   return (
     <div className="min-h-screen flex flex-col bg-cream-100 text-gray-900 font-sans">
-      <DemoBanner authMode={authMode} />
       <Header />
       <main className="flex-1">
         <Routes>
